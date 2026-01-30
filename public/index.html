@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Chat Room</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Simple Chat Room</h1>
+
+      <div class="join">
+        <input id="nameInput" type="text" placeholder="Enter your name..." />
+        <button id="joinBtn">Join Chat</button>
+      </div>
+
+      <div id="chatArea" class="chat hidden">
+        <div id="messages" class="messages"></div>
+
+        <form id="chatForm" class="chatForm">
+          <input
+            id="messageInput"
+            type="text"
+            placeholder="Type a message..."
+            autocomplete="off" />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Socket.IO client served automatically by the server -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
